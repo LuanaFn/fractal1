@@ -157,12 +157,12 @@ def main(iterations, axiom, rules, angle, length=None, size=None, correction_ang
 
 # Global parameters
 
-width = 450
+width = 800
 
 title = "ThreeDragon-Curve"
-axiom = "FFXX+"
-rules = {"X":"X+YF+", "Y":"-FX-Y"}
-iterations = 6 # TOP: 15
+axiom = "XXXX"
+rules = {"X":"Y+FFFX", "Y":"ZZZZ+ZZZZ+ZZZZ+ZZZZ", "Z":"F+F-F+F-"}
+iterations = 3 # TOP: 15
 angle = 90
 
 offset_angle = -90 + 45 * iterations
