@@ -1,3 +1,5 @@
+# INICIO IMPLEMENTACAO PARA O DESENHO APARECER NA TELA
+
 import turtle
 from math import cos, sin, radians
 
@@ -155,18 +157,24 @@ def main(iterations, axiom, rules, angle, length=None, size=None, correction_ang
     
     wn.exitonclick()
 
-# Global parameters
+# FIM DA IMPLEMENTAÇÃO DO DESENHO
 
-width = 800
+width = 800 # tamanho da tela para mostrar o desenho
+angle = 90 # grau que o ângulo vira a cada comando de virar
 
-title = "ThreeDragon-Curve"
-axiom = "XXXX"
-rules = {"X":"Y+FFFX", "Y":"ZZZZ+ZZZZ+ZZZZ+ZZZZ", "Z":"F+F-F+F-"}
-iterations = 3 # TOP: 15
-angle = 90
+title = "Mosaico de quadradinhos"
+axiom = "XXXX" #completa o ciclo 4x, então com qqr numero de iterações sempre vai formar um quadradão no final
+rules = {
+    "X":"Y+FFFX", # faz o loop de ir desenhando um quadradinho - espaço - mais quadradinhos -> é recursivo
+    "Y":"ZZZZ+ZZZZ+ZZZZ+ZZZZ", # junta as linhas com curvas para formar um quadradinho
+    "Z":"F+F-F+F-" # desenha uma linha reta em zigue-zague parecida com: /\/\
+}
+iterations = 3 # define quão fundo vamos ir subtituindo regras superficiais por regras mais fundas na recursão. O mínimo para desenhar algo é 3 pois carrega a variável X, Y e Z
 
+# Ajuste de alguns parâmetros para posicionar o fractal de forma que caiba na tela
 offset_angle = -90 + 45 * iterations
 correction_angle = 45 * iterations
 
+# chamada da função que desenha o fractal
 main(iterations, axiom, rules, angle, correction_angle=correction_angle, 
     offset_angle=offset_angle, width=width, height=width)
