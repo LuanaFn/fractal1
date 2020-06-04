@@ -1,3 +1,6 @@
+# Sugestão de implementação criada por Ezequiel Leonardo Castaño - https://elc.github.io/pages/about/
+# Pode ser encontrada em: https://elc.github.io/posts/plotting-fractals-step-by-step-with-python/
+
 # INICIO IMPLEMENTACAO PARA O DESENHO APARECER NA TELA
 
 import turtle
