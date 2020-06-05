@@ -162,7 +162,7 @@ def main(iterations, axiom, rules, angle, length=None, size=None, correction_ang
 
 # FIM DA IMPLEMENTAÇÃO DO DESENHO
 
-width = 800 # tamanho da tela para mostrar o desenho
+width = 600 # tamanho da tela para mostrar o desenho
 angle = 90 # grau que o ângulo vira a cada comando de virar
 
 title = "Mosaico de quadradinhos"
@@ -172,7 +172,7 @@ rules = {
     "Y":"ZZZZ+ZZZZ+ZZZZ+ZZZZ", # junta as linhas com curvas para formar um quadradinho
     "Z":"F+F-F+F-" # desenha uma linha reta em zigue-zague parecida com: /\/\
 }
-iterations = 3 # define quão fundo vamos ir subtituindo regras superficiais por regras mais fundas na recursão. O mínimo para desenhar algo é 3 pois carrega a variável X, Y e Z
+iterations = 10 # define quão fundo vamos ir subtituindo regras superficiais por regras mais fundas na recursão. O mínimo para desenhar algo é 3 pois carrega a variável X, Y e Z
 
 # Ajuste de alguns parâmetros para posicionar o fractal de forma que caiba na tela
 offset_angle = -90 + 45 * iterations
